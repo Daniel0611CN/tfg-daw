@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristy&Co Studio - Confirmación de Registro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+
+        .email-wrapper {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .email-content {
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            border-spacing: 0;
+        }
+
+        .email-content td {
+            padding: 0;
+        }
+
+        .heading {
+            color: #b0817e;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+
+        .title {
+            color: #b0817e;
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .text {
+            font-size: 14px;
+            color: #555555;
+            line-height: 1.6;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .confirm-link {
+            color: #555555;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            display: inline-block;
+            margin-top: 24px;
+            transition: color 0.3s ease;
+        }
+
+        .confirm-link:hover {
+            color: #dda39d;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: #888888;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .footer-link {
+            color: #dda39d;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #b0817e;
+        }
+
+        .small {
+            font-size: 12px;
+            color: #aaaaaa;
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px) {
+            .email-content {
+                width: 100% !important;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<table class="email-wrapper" style="width: 100%; padding: 20px 0; text-align: center;">
+    <tr>
+        <td>
+            <table class="email-content" style="width: 600px; margin: 0 auto; text-align: center; border-spacing: 0;">
+                <tr>
+                    <td>
+<!--                        <img src="cid:logo" alt="logo" style="width: 100px;">-->
+                        <h1 class="title" style="color: #b0817e; font-size: 28px; font-weight: 400; margin-bottom: 8px; text-align: center;">Kristy&Co Studio</h1>
+                        <h2 class="heading" th:text="${welcome}" style="color: #b0817e; font-size: 20px; font-weight: 400; margin-bottom: 16px; text-align: center;"></h2>
+                        <p class="text" th:text="${description}" style="font-size: 14px; color: #555555; line-height: 1.6; font-weight: 300; text-align: center;"></p>
+                        <p class="text" th:text="${link}" style="font-size: 14px; color: #555555; line-height: 1.6; font-weight: 300; text-align: center;"></p>
+                        <a class="confirm-link" th:href="@{${token}}" style="color: #555555; text-decoration: none; font-weight: 500; font-size: 16px; display: inline-block; margin-top: 24px; transition: color 0.3s ease;">
+                            Confirmar registro
+                        </a>
+                        <p class="small" style="font-size: 12px; color: #aaaaaa; display: block; margin-top: 40px; text-align: center;">
+                            Si ya has confirmado tu registro anteriormente, puedes ignorar este mensaje.
+                        </p>
+                        <p class="footer-text" style="font-size: 14px; color: #888888; margin-top: 30px; text-align: center;">
+                            Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros.
+                        </p>
+                        <p class="footer-text" style="font-size: 14px; color: #888888; margin-top: 30px; text-align: center;">
+                            También puedes leer nuestras <a href="https://kristyco-studio.vercel.app/politica-privacidad" class="footer-link" style="color: #dda39d; font-weight: 500; text-decoration: none;">Políticas de Privacidad</a> para conocer más sobre cómo manejamos tus datos.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
